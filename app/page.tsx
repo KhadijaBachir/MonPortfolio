@@ -41,7 +41,7 @@ export default function Home() {
       id: 3, 
       title: "Projet 3", 
       description: "Une application de générateur d'entrainement quotidien faite à artir de Type-Script", 
-      link: "hhttps://frolicking-selkie-519905.netlify.app/",
+      link: "https://frolicking-selkie-519905.netlify.app/",
       image: "crunch.avif"
     },
     { 
