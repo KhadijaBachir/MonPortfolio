@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Code2, LayoutGrid, Monitor, FileCode2, Database } from "lucide-react";
@@ -36,57 +37,56 @@ export default function Home() {
       link: "https://prismatic-lebkuchen-f336dd.netlify.app/",
       image: "porto2.webp"
     },
-   
     { 
       id: 3, 
       title: "Projet 3", 
-      description: "Projet de restauration fait à partir de React JS.", 
-      link: "https://lucent-parfait-4274af.netlify.app/",
-      image: "resto2.jpeg"
-    },
-    { 
-      id: 4, 
-      title: "Projet 4",
-      description: "Site E-commerce crée à partir de HTML,CSS et Java-Script.", 
-      link: "https://singular-swan-618276.netlify.app/",
-      image: "ecom1.webp"
-    },
-    { 
-      id: 5, 
-      title: "Projet 5", 
       description: "Une application de générateur d'entrainement quotidien faite à artir de Type-Script", 
-      link: "https://whimsical-alfajores-3a587c.netlify.app/",
+      link: "hhttps://frolicking-selkie-519905.netlify.app/",
       image: "crunch.avif"
     },
     { 
-      id: 6, 
-      title: "Projet 6", 
+      id: 4, 
+      title: "Projet 4", 
+      description: "Site E-commerce crée à partir de HTML et CSS.", 
+      link: "https://eclectic-cajeta-ae2d38.netlify.app/",
+      image: "ecom.webp"
+    },
+  
+    { 
+      id: 5, 
+      title: "Projet 5", 
       description: "Une application de bibliothèque digitale réaliser à partir de React- Vite.", 
       link: "https://euphonious-lolly-d24442.netlify.app/",
       image: "j.jpg"
     },
    
     { 
-      id: 7, 
-      title: "Projet 7", 
-      description: "Site E-commerce crée à partir de HTML et CSS.", 
-      link: "https://eclectic-cajeta-ae2d38.netlify.app/",
-      image: "ecom.webp"
-    },
-   
-    { 
-      id: 8, 
-      title: "Projet 8", 
+      id: 6, 
+      title: "Projet 6", 
       description: "Site de vente de produits et conseils pour Maman & Bébé.", 
       link: "https://bespoke-mermaid-0c78d8.netlify.app/",
       image: "logo.jpg"
     },
     { 
-      id: 9, 
-      title: "Projet 9", 
+      id: 7, 
+      title: "Projet 7",
+      description: "Site E-commerce crée à partir de HTML,CSS et Java-Script.", 
+      link: "https://singular-swan-618276.netlify.app/",
+      image: "ecom1.webp"
+    },
+    { 
+      id: 8, 
+      title: "Projet 8", 
       description: "Projet d'hôtellerie crée avec HTML et CSS.", 
       link: "https://ephemeral-fenglisu-03b46c.netlify.app/",
       image: "resto1.jpeg"
+    },
+    { 
+      id: 9, 
+      title: "Projet 9", 
+      description: "Projet de restauration fait à partir de React JS.", 
+      link: "https://lucent-parfait-4274af.netlify.app/",
+      image: "resto2.jpeg"
     },
     { 
       id: 10, 
