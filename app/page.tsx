@@ -1,13 +1,13 @@
-
 "use client";
 
-import { Code2, LayoutGrid, Monitor, FileCode2, Database } from "lucide-react";
+import { Code2, LayoutGrid, Monitor, FileCode2, Database, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 export default function Home() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const skills = [
     { name: "HTML", icon: <FileCode2 className="w-8 h-8" /> },
@@ -47,53 +47,58 @@ export default function Home() {
     { 
       id: 4, 
       title: "Projet 4", 
-      description: "Site E-commerce crée à partir de HTML et CSS.", 
-      link: "https://eclectic-cajeta-ae2d38.netlify.app/",
-      image: "ecom.webp"
+      description: "Une application de location et vente de voitures faite à partir de Type-Script et Java-Script", 
+      link: "https://dapper-cendol-3eda96.netlify.app/",
+      image: "https://images.pexels.com/photos/1719648/pexels-photo-1719648.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
-  
     { 
       id: 5, 
       title: "Projet 5", 
+      description: "Site E-commerce crée à partir de HTML,CSS et Java-Script.", 
+      link: "https://sensational-stroopwafel-af5e1f.netlify.app/",
+      image: "ecom.webp"
+    },
+    { 
+      id: 6, 
+      title: "Projet 6", 
       description: "Une application de bibliothèque digitale réaliser à partir de React- Vite.", 
       link: "https://euphonious-lolly-d24442.netlify.app/",
       image: "j.jpg"
     },
-   
     { 
-      id: 6, 
-      title: "Projet 6", 
+      id: 7, 
+      title: "Projet 7", 
       description: "Site de vente de produits et conseils pour Maman & Bébé.", 
       link: "https://bespoke-mermaid-0c78d8.netlify.app/",
       image: "logo.jpg"
     },
     { 
-      id: 7, 
-      title: "Projet 7",
-      description: "Site E-commerce crée à partir de HTML,CSS et Java-Script.", 
-      link: "https://singular-swan-618276.netlify.app/",
-      image: "ecom1.webp"
-    },
-    { 
       id: 8, 
-      title: "Projet 8", 
-      description: "Projet d'hôtellerie crée avec HTML et CSS.", 
-      link: "https://ephemeral-fenglisu-03b46c.netlify.app/",
-      image: "resto1.jpeg"
+      title: "Projet 8",
+      description: "Site E-commerce crée à partir de HTML,CSS et Java-Script.", 
+      link: "https://cerulean-biscochitos-f6b2ee.netlify.app/",
+      image: "ecom1.webp"
     },
     { 
       id: 9, 
       title: "Projet 9", 
+      description: "Projet d'hôtellerie crée avec HTML et CSS.", 
+      link: "https://unique-bublanina-e4aef3.netlify.app/",
+      image: "resto1.jpeg"
+    },
+    { 
+      id: 10, 
+      title: "Projet 10", 
       description: "Projet de restauration fait à partir de React JS.", 
       link: "https://lucent-parfait-4274af.netlify.app/",
       image: "resto2.jpeg"
     },
     { 
-      id: 10, 
-      title: "Projet 10", 
-      description: "Portofolio fait à partir de Type Script, Vite et la Librairie de Material UI.", 
-      link: "https://typeporto.netlify.app",
-      image: "porto1.jpeg"
+      id: 11, 
+      title: "Projet 11", 
+      description: "Site E-commerce crée à partir de HTML,CSS et Java-Script.", 
+      link: "https://resilient-arithmetic-4c8607.netlify.app",
+      image: "ecom.webp"
     },
   ];
 
@@ -104,15 +109,66 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white overflow-x-hidden">
-      {/* Header */}
+      {/* Header amélioré */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <h1 className="text-lg md:text-xl font-bold">Ndeye Khadidiatou Touré</h1>
-          <div className="flex gap-4 md:gap-6">
-            <a href="#" className="text-sm md:text-base hover:text-gray-600">Accueil</a>
-            <a href="#projects" className="text-sm md:text-base hover:text-gray-600">Projets</a>
-            <a href="#contact" className="text-sm md:text-base hover:text-gray-600">Contact</a>
+          {/* Logo réduit sur mobile */}
+          <div className="flex items-center">
+            <h1 className="text-lg md:text-xl font-bold hidden sm:block">
+              Ndeye Khadidiatou Touré
+            </h1>
+            <h1 className="text-lg font-bold sm:hidden">NKT</h1>
           </div>
+
+          {/* Menu desktop */}
+          <div className="hidden md:flex gap-6">
+            <a href="#" className="hover:text-gray-600 transition-colors">
+              Accueil
+            </a>
+            <a href="#projects" className="hover:text-gray-600 transition-colors">
+              Projets
+            </a>
+            <a href="#contact" className="hover:text-gray-600 transition-colors">
+              Contact
+            </a>
+          </div>
+
+          {/* Bouton menu mobile */}
+          <button
+            className="md:hidden p-2"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+
+          {/* Menu mobile */}
+          {isMenuOpen && (
+            <div className="absolute top-16 left-0 right-0 bg-white shadow-lg md:hidden">
+              <div className="flex flex-col space-y-4 p-4">
+                <a 
+                  href="#" 
+                  className="hover:text-gray-600 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Accueil
+                </a>
+                <a 
+                  href="#projects" 
+                  className="hover:text-gray-600 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Projets
+                </a>
+                <a 
+                  href="#contact" 
+                  className="hover:text-gray-600 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Contact
+                </a>
+              </div>
+            </div>
+          )}
         </nav>
       </header>
 
@@ -239,7 +295,7 @@ export default function Home() {
       <footer className="bg-gray-900 text-white py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-sm sm:text-base text-center sm:text-left">© 2024 Ndeye Khadidiatou Touré. Tous les droits sont réservés.</p>
+            <p className="text-sm sm:text-base text-center sm:text-left">© 2025 Ndeye Khadidiatou Touré. Tous les droits sont réservés.</p>
             <div className="flex gap-4 sm:gap-6">
               <a href="#" className="hover:text-gray-300 text-sm sm:text-base">Twitter</a>
               <a href="#" className="hover:text-gray-300 text-sm sm:text-base">LinkedIn</a>
